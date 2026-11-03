@@ -3,6 +3,7 @@ const app = express();
 const port = 8080;
 
 app.use(express.urlencoded({ extended: true })); //parse incoming post request body
+app.use(express.json()); // Allow express to read json data from the request body
 
 app.get("/register", (req, res) => {
   let { user, password } = req.query;
